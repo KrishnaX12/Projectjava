@@ -1,7 +1,8 @@
 import java.lang.*;
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        String spacey = "           Spacey            ";
+/*        String spacey = "           Spacey            ";
         String a1=new String("KRishna");
         String b1=new String ("KRishna");
         String c1= (a1==b1)?"Same":"Not same";
@@ -35,7 +36,7 @@ public class Main {
         String s2 = "PYTHON";
         String s3 = "C++";
         System.out.println(s1.equalsIgnoreCase(s2));
-        System.out.println(s1.compareTo(s2)); // return unicode value of s1[0] - s2[1]
+        System.out.println(s1.compareTo(s2)); // return unicode value of s1[0] - s2[0]
         System.out.println(s1.compareToIgnoreCase(s3)); // same but if s1 = 'a' & s2 = 'A' then return 0;
         System.out.println(s1.contains("Pyth"));
         System.out.println(String.valueOf(3.14159265359)); // any type of data to string
@@ -51,16 +52,21 @@ public class Main {
         System.out.println((" ").matches("\\s")); // true string = one space
         System.out.println(("d").matches("\\S")); // true string = one char
         System.out.println(("&").matches("\\w")); // true string = one char or one digit
-        System.out.println(("324ccc").matches("\\W")); // true if the entire string contains only one single non-word character. alsotrue for space
+        System.out.println(("3").matches("\\W")); // true if the entire string contains only one single non-word character. also true for space
         System.out.println(("a").matches("[^a-z]"));
         //                          Quantifiers
         System.out.println("#@D FS44".matches(".*")); // 0 or more times
         System.out.println("abDGSSGGSksjbkvu".matches("[a-zA-z]*")); // 0 or more time
         System.out.println("abcabc".matches("[ab]*")); // 0 or more times of ab
-        System.out.println("Pewds".matches("[ab]+")); // 1 or more times of ab
+        System.out.println("Pewds".matches("[ab]+")); // 1 or more times of ab*/
         System.out.println("ababa".matches("[ab]{5}")); // the letter can be a or b or c but exactly 5 char
         System.out.println("ababababa".matches("[ab]{5,10}")); // the letter can be a or b or c but exactly between ( 5 - 10 ) char
         System.out.println("Pewds@gmail.com".matches(".*@.*")); // anything b4 @ any times and anything after @ any times
         System.out.println("Pewds@gmail.com".matches("[a-z0-9A-Z]*@[a-zA-z]*.[a-zA-z]*")); // anything b4 @ any times and anything after @ any times
+        // StringBuilder
+        StringBuilder a = new StringBuilder();
+        for(int i=65;i<=90;i++) {
+            a.append((char) i);
+        }
     }
 }
